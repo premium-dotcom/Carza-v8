@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dealers | CARZA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="dealers">
+
+<header class="navbar">
+  <a href="index.html" class="logo">CAR<span>ZA</span></a>
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="cars.html">Cars</a>
+    <a href="dealers.html">Dealers</a>
+    <a href="dealer.html">Dealer Portal</a>
+    <a href="login.html" id="authLink">Login</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="page-header">
+  <p class="eyebrow">DEALER NETWORK</p>
+  <h1>Our dealerships</h1>
+  <p>Discover trusted dealerships on CARZA.</p>
+</section>
+
+<section class="section">
+  <div id="dealersGrid" class="dealer-grid">
+    <div class="loading">Loading dealers...</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="logo">CAR<span>ZA</span></div>
+  <p>© 2026 CARZA</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
