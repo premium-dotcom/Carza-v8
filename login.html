@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dealer Login | CARZA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="login">
+
+<header class="navbar">
+  <a href="index.html" class="logo">CAR<span>ZA</span></a>
+</header>
+
+<main class="auth-page">
+
+<div class="auth-card">
+
+  <div id="loginForm">
+
+    <p class="eyebrow">DEALER PORTAL</p>
+    <h1>Welcome back</h1>
+
+    <input id="loginEmail" type="email" placeholder="Email">
+
+    <input id="loginPassword" type="password" placeholder="Password">
+
+    <button id="loginBtn" class="btn primary full">
+      Login
+    </button>
+
+    <p id="loginMessage" class="message"></p>
+
+    <p class="switch">
+      Don't have a dealer account?
+      <button id="showSignup">Create one</button>
+    </p>
+
+  </div>
+
+
+  <div id="signupForm" class="hidden">
+
+    <p class="eyebrow">JOIN CARZA</p>
+    <h1>Create dealer account</h1>
+
+    <input id="signupName" placeholder="Dealership name">
+
+    <input id="signupEmail" type="email" placeholder="Business email">
+
+    <input id="signupPhone" placeholder="Phone number">
+
+    <input id="signupCity" placeholder="City">
+
+    <input id="signupPassword" type="password" placeholder="Password">
+
+    <button id="signupBtn" class="btn primary full">
+      Create Account
+    </button>
+
+    <p id="signupMessage" class="message"></p>
+
+    <p class="switch">
+      Already have an account?
+      <button id="showLogin">Login</button>
+    </p>
+
+  </div>
+
+</div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
