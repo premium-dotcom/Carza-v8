@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dealer Portal | CARZA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="dealer">
+
+<header class="navbar">
+  <a href="index.html" class="logo">CAR<span>ZA</span></a>
+
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="cars.html">Cars</a>
+    <a href="dealers.html">Dealers</a>
+    <a href="dealer.html">Dealer Portal</a>
+    <button id="logoutBtn" class="nav-button">Logout</button>
+  </nav>
+</header>
+
+<main class="dashboard">
+
+<section class="dashboard-header">
+  <div>
+    <p class="eyebrow">DEALER DASHBOARD</p>
+    <h1 id="dealerName">Loading...</h1>
+  </div>
+
+  <button id="showAddVehicle" class="btn primary">
+    + Add Vehicle
+  </button>
+</section>
+
+
+<section class="dashboard-stats">
+
+  <div class="dashboard-stat">
+    <strong id="totalDealerCars">0</strong>
+    <span>Total vehicles</span>
+  </div>
+
+  <div class="dashboard-stat">
+    <strong id="pendingDealerCars">0</strong>
+    <span>Pending</span>
+  </div>
+
+  <div class="dashboard-stat">
+    <strong id="approvedDealerCars">0</strong>
+    <span>Live</span>
+  </div>
+
+</section>
+
+
+<section id="vehicleFormSection" class="panel hidden">
+
+  <h2>Add a vehicle</h2>
+
+  <div class="form-grid">
+
+    <input id="vehicleMake" placeholder="Make e.g. Toyota">
+
+    <input id="vehicleModel" placeholder="Model e.g. Corolla">
+
+    <input id="vehicleYear" type="number" placeholder="Year">
+
+    <input id="vehiclePrice" type="number" placeholder="Price">
+
+    <input id="vehicleMileage" type="number" placeholder="Mileage">
+
+    <input id="vehicleLocation" placeholder="Location">
+
+    <select id="vehicleBody">
+      <option value="">Body type</option>
+      <option>Sedan</option>
+      <option>SUV</option>
+      <option>Hatchback</option>
+      <option>Coupe</option>
+      <option>Bakkie</option>
+      <option>MPV</option>
+      <option>Convertible</option>
+      <option>Other</option>
+    </select>
+
+    <select id="vehicleTransmission">
+      <option value="">Transmission</option>
+      <option>Automatic</option>
+      <option>Manual</option>
+    </select>
+
+    <select id="vehicleFuel">
+      <option value="">Fuel type</option>
+      <option>Petrol</option>
+      <option>Diesel</option>
+      <option>Hybrid</option>
+      <option>Electric</option>
+    </select>
+
+  </div>
+
+  <textarea id="vehicleDescription"
+    placeholder="Vehicle description"></textarea>
+
+  <label class="upload-label">
+    Vehicle photos
+    <input id="vehicleImages" type="file" accept="image/*" multiple>
+  </label>
+
+  <div class="form-actions">
+    <button id="cancelVehicle" class="btn secondary">Cancel</button>
+    <button id="saveVehicle" class="btn primary">Submit Vehicle</button>
+  </div>
+
+  <p id="vehicleMessage" class="message"></p>
+
+</section>
+
+
+<section class="panel">
+
+  <div class="section-heading">
+    <h2>Your vehicles</h2>
+
+    <button id="refreshDealerCars" class="btn secondary">
+      Refresh
+    </button>
+  </div>
+
+  <div id="dealerVehicles" class="dealer-vehicles">
+    <div class="loading">Loading...</div>
+  </div>
+
+</section>
+
+
+<section class="panel">
+
+  <h2>EFT payment requests</h2>
+
+  <p class="muted">
+    CARZA can currently handle payments by EFT.
+    Payment activation is manually verified by the CARZA administrator.
+  </p>
+
+  <button id="paymentRequestBtn" class="btn primary">
+    Request Listing Package
+  </button>
+
+  <div id="paymentInfo"></div>
+
+</section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
