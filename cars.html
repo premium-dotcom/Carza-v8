@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars | CARZA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="cars">
+
+<header class="navbar">
+  <a href="index.html" class="logo">CAR<span>ZA</span></a>
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="cars.html">Cars</a>
+    <a href="dealers.html">Dealers</a>
+    <a href="dealer.html">Dealer Portal</a>
+    <a href="login.html" id="authLink">Login</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="page-header">
+  <p class="eyebrow">CAR MARKETPLACE</p>
+  <h1>Find your next car</h1>
+  <p>Search thousands of vehicles from dealerships.</p>
+</section>
+
+<section class="filters">
+
+  <input id="filterMake" placeholder="Make">
+
+  <input id="filterModel" placeholder="Model">
+
+  <input id="filterLocation" placeholder="Location">
+
+  <select id="filterTransmission">
+    <option value="">Transmission</option>
+    <option>Automatic</option>
+    <option>Manual</option>
+  </select>
+
+  <input id="filterMinPrice" type="number" placeholder="Min price">
+
+  <input id="filterMaxPrice" type="number" placeholder="Max price">
+
+  <button id="searchCars" class="btn primary">Search</button>
+
+  <button id="clearFilters" class="btn secondary">Clear</button>
+
+</section>
+
+<section class="section">
+  <div id="carsGrid" class="car-grid">
+    <div class="loading">Loading vehicles...</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="logo">CAR<span>ZA</span></div>
+  <p>© 2026 CARZA</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
