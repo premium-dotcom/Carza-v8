@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CARZA Admin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="admin">
+
+<header class="navbar">
+  <a href="index.html" class="logo">CAR<span>ZA</span></a>
+
+  <nav>
+    <a href="index.html">View CARZA</a>
+    <button id="logoutBtn" class="nav-button">Logout</button>
+  </nav>
+</header>
+
+<main class="dashboard">
+
+<section class="dashboard-header">
+
+  <div>
+    <p class="eyebrow">ADMINISTRATION</p>
+    <h1>CARZA Control Centre</h1>
+  </div>
+
+  <button id="refreshAdmin" class="btn secondary">
+    Refresh
+  </button>
+
+</section>
+
+
+<section class="dashboard-stats">
+
+  <div class="dashboard-stat">
+    <strong id="adminPending">0</strong>
+    <span>Pending</span>
+  </div>
+
+  <div class="dashboard-stat">
+    <strong id="adminApproved">0</strong>
+    <span>Approved</span>
+  </div>
+
+  <div class="dashboard-stat">
+    <strong id="adminDealers">0</strong>
+    <span>Dealers</span>
+  </div>
+
+</section>
+
+
+<section class="panel">
+
+  <h2>Pending vehicles</h2>
+
+  <div id="pendingVehicles" class="admin-list">
+    <div class="loading">Loading...</div>
+  </div>
+
+</section>
+
+
+<section class="panel">
+
+  <h2>Payment requests</h2>
+
+  <div id="paymentRequests" class="admin-list">
+    <div class="loading">Loading...</div>
+  </div>
+
+</section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
