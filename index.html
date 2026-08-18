@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CARZA - Find your next car from trusted dealerships across South Africa.">
+  <title>CARZA | South Africa's Smarter Car Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="home">
+
+<header class="navbar">
+  <a href="index.html" class="logo">CAR<span>ZA</span></a>
+
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="cars.html">Cars</a>
+    <a href="dealers.html">Dealers</a>
+    <a href="dealer.html">Dealer Portal</a>
+    <a href="login.html" id="authLink">Login</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">THE SMARTER WAY TO BUY CARS</p>
+
+    <h1>Find your next car.<br><span>Without the hassle.</span></h1>
+
+    <p>
+      Browse vehicles from dealerships across South Africa
+      with simple searching, transparent listings and no unnecessary fees.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="cars.html" class="btn primary">Browse Cars</a>
+      <a href="dealer.html" class="btn secondary">List Your Cars</a>
+    </div>
+  </div>
+</section>
+
+<section class="search-box">
+  <h2>Find your car</h2>
+
+  <form id="homeSearch">
+    <input id="homeMake" placeholder="Make e.g. Toyota">
+
+    <input id="homeModel" placeholder="Model e.g. Corolla">
+
+    <input id="homeMaxPrice" type="number" placeholder="Max price">
+
+    <button class="btn primary">Search Cars</button>
+  </form>
+</section>
+
+<section class="section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">FEATURED</p>
+      <h2>Latest vehicles</h2>
+    </div>
+
+    <a href="cars.html" class="text-link">View all →</a>
+  </div>
+
+  <div id="featuredCars" class="car-grid">
+    <div class="loading">Loading vehicles...</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div>
+    <strong id="vehicleCount">0</strong>
+    <span>Vehicles</span>
+  </div>
+
+  <div>
+    <strong id="dealerCount">0</strong>
+    <span>Dealers</span>
+  </div>
+
+  <div>
+    <strong>24/7</strong>
+    <span>Online</span>
+  </div>
+</section>
+
+<section class="cta">
+  <p class="eyebrow">DEALERS</p>
+  <h2>Ready to put your dealership on CARZA?</h2>
+  <p>Create your dealer account and start adding vehicles.</p>
+  <a href="login.html" class="btn primary">Create Dealer Account</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="logo">CAR<span>ZA</span></div>
+  <p>© 2026 CARZA. Built for smarter vehicle shopping.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="app.js"></script>
+
+</body>
+  </html>
